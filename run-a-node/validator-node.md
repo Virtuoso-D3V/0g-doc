@@ -8,12 +8,17 @@ This document outlines the steps to deploy your own validator node.
 - Memory: 8 GB RAM
 - CPU: 4 cores
 - Disk: 500 GB NVME SSD
-- Bandwidth: 100mbps Gbps for Download / Upload
+- Bandwidth: 100Mbps for Download / Upload
 ```
 
 ### Server Timezone Configuration
 
 Make sure your server timezone configuration is UTC. Check your current timezone by running `timedatectl`
+
+```bash
+timedatectl | grep "Time zone"
+                Time zone: Etc/UTC (UTC, +0000)
+```
 
 Note: Having a different timezone configuration may cause a `LastResultHash` mismatch error and take down your node!
 
