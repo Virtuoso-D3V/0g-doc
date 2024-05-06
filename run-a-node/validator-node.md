@@ -1,4 +1,6 @@
 # Validator Node
+[!IMPORTANT]
+We are currently temporarily suspending the network to perform an upgrade. Therefore, it is not possible to Faucet, Transfer, Run node.... Announcement  will be given soon!
 
 This document outlines the steps to deploy your own validator node.
 
