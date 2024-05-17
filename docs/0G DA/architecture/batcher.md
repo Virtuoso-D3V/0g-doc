@@ -1,3 +1,4 @@
+
 # Batcher
 
 The batcher is an off-chain service which acts as a bridge between the Disperser and 0G Storage. It is in effect during the Dispersal phase. Figure 1 shows the detailed batcher workflow.
@@ -29,4 +30,5 @@ The confirmer is used to query the tx receipt from the on-chain contract to chec
 
 The finalizer is used to check the difference between the confirmed block number and current block number to determine if such transaction is finalized (no reorg) on chain.
 
-<figure><img src="../../../.gitbook/assets/zg-da-batcher.png" alt=""><figcaption><p>Figure 1. Batcher Workflow</p></figcaption></figure>
+<figure><img width="1090" alt="Untitled (6)" src="https://github.com/Delight362/0g-doc/assets/96892410/4e347c65-bad9-4fd0-a88e-f062e669186b">
+<figcaption><p>Figure 1. Batcher Workflow</p></figcaption></figure>
