@@ -38,3 +38,4 @@
   * [Validator Node](run-a-node/validator-node.md)
   * [Storage Node And DA Services](run-a-node/storage-node-and-da-services.md)
 * [Contributing](contributing.md)
+* [Whitepaper](whitepaper.md)
