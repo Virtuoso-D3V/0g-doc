@@ -36,3 +36,9 @@ During download, the `file_root_hash` can be retrieved from these places
 
 * When you upload the file, the log will give you an information about the file root. Look for `Data merkle root calculated root=`.
 * Locate your transaction with the transaction hash in the [https://storagescan-newton.0g.ai/](https://chainscan-newton.0g.ai/). Check the `Overview -> File Hash` in the tx detail page.
+
+#### Q\&A
+
+*   My command fails to execute with error `Transaction execution failed`&#x20;
+
+    Try to set a higher gas limit with `--gas-limit`. For the reason why you need to set a customized gas limit, check the Ethereum [EIP-150](https://github.com/ethereum/EIPs/blob/master/EIPS/eip-150.md).
