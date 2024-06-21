@@ -7,8 +7,8 @@
 
 ## Testnet
 
-* Flow Contract: `0xb8F03061969da6Ad38f0a4a9f8a86bE71dA3c8E7`
-* Mine Contract: `0x96D90AAcb2D5Ab5C69c1c351B0a0F105aae490bE`
-* Market Contract: `0xaD1436779E9267abd51AD7c17c8233E4c563cFbB`
-* Reward Contract: `0x82F9E4D0892169ac342FA9ad5618aD407B27669B`
-* Deployed Block Number: `334797`
+* Flow Contract: `0x429e97406E394856F7a9FE1c9728646162dEC1B6`
+* Mine Contract: `0x8c5624818AC8b3F1d45f46f5d691EA68ACeE495F`
+* Market Contract: `0xA8E3bb2b9168930A6B2B0c8B97F4199aDcb8cC56`
+* Reward Contract: `0xD62F2A593aa812160F8b099b5bFD5eC1F112481E`
+* Deployed Block Number: `1039`
