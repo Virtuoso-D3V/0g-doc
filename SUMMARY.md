@@ -37,5 +37,6 @@
   * [Testnet Configuration](run-a-node/testnet-configuration.md)
   * [Validator Node](run-a-node/validator-node.md)
   * [Storage Node And DA Services](run-a-node/storage-node-and-da-services.md)
+  * [Storage Node CLI](run-a-node/storage-node-cli.md)
 * [Contributing](contributing.md)
 * [Whitepaper](whitepaper.md)
