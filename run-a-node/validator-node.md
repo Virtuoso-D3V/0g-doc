@@ -203,6 +203,10 @@ Follow the same setup process above to start syncing your node to the latest blo
 
 > Important: Delete `$HOME/config/addrbook.json` if you are using the same machine
 
+> Important: Make sure the genesis.json is updated
+
+> Important: Make sure the seeds are updated
+
 > Warning: Do not migrate the files before you finish syncing the blocks. This is to avoid double signing.
 
 > Warning: Do not stop your old server before you finish syncing the blocks. This is to avoid getting jailed for long downtime.
