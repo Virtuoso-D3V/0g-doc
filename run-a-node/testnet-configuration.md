@@ -3,7 +3,7 @@
 | Field            | Value                                                                  |
 | ---------------- | ---------------------------------------------------------------------- |
 | Chain-Name       | 0G-Newton-Testnet                                                      |
-| Chain-Id         | 16600                                                                  |
+| Chain-Id         | 16600 (`zgtendermint_16600-2`)                                         |
 | Token-Symbol     | A0GI                                                                   |
 | Chain-RPC        | https://rpc-testnet.0g.ai                                              |
 | Chain-Websocket  | wss://rpc-testnet.0g.ai/ws                                             |

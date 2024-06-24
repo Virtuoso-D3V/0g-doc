@@ -27,7 +27,7 @@ source ~/.profile
 
 #### Set Chain ID
 
-<pre class="language-bash"><code class="lang-bash"><strong>0gchaind config chain-id zgtendermint_16600-1
+<pre class="language-bash"><code class="lang-bash"><strong>0gchaind config chain-id zgtendermint_16600-2
 </strong></code></pre>
 
 ### Initialize Node
@@ -35,7 +35,7 @@ source ~/.profile
 We need to initialize the node to create all the necessary validator and node configuration files:
 
 ```bash
-0gchaind init <your_validator_name> --chain-id zgtendermint_16600-1
+0gchaind init <your_validator_name> --chain-id zgtendermint_16600-2
 ```
 
 > Note: the validator name can only contain ASCII characters.
@@ -130,7 +130,7 @@ As a next step, you must acquire some testnet tokens either by wallet transfer o
   --amount=<staking_amount>ua0gi \
   --pubkey=$(0gchaind tendermint show-validator) \
   --moniker="<your_validator_name>" \
-  --chain-id=zgtendermint_16600-1 \
+  --chain-id=zgtendermint_16600-2 \
   --commission-rate="0.10" \
   --commission-max-rate="0.20" \
   --commission-max-change-rate="0.01" \
