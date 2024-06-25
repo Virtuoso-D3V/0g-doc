@@ -166,6 +166,10 @@ log_contract_address
 
 # block number to start the sync, better to align with the config in storage service
 log_sync_start_block_number
+
+# storage nodes to download data from, separated by ","
+# the provided nodes should cover full data in the storage network
+zgs_node_urls
 ```
 
 5. Run the kv service
