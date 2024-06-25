@@ -138,7 +138,7 @@ Second step is to launch the kv service.
 2. Download the source code
 
 ```bash
-git clone https://github.com/0glabs/0g-storage-kv.git
+git clone -b v1.1.0-testnet https://github.com/0glabs/0g-storage-kv.git
 ```
 
 3. Build the source code
