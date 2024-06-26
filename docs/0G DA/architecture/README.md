@@ -30,4 +30,4 @@ There are two approaches for data retrieval.
 
 In this way, 0G DA provides not only [security guarantee](../security/) to the data but also efficiency for the user to quickly retrieve the data from the disperser.
 
-<figure><img src="../../../.gitbook/assets/zg-da-architecture.png" alt=""><figcaption><p>Figure 1. Architecture Overview</p></figcaption></figure>
+<figure><img src="../../../.gitbook/assets/zg-da-architecture.jpg" alt=""><figcaption><p>Figure 1. Architecture Overview</p></figcaption></figure>
