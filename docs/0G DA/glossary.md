@@ -8,7 +8,7 @@
 
 ## System Components
 
-**Disperser**. The Disperser is an off-chain service which is responsible for uploading the data into s3 buckets and sending the blob to the Batcher for further process. The disperser is an untrusted system component.
+**Disperser**. The Disperser is an off-chain service which is responsible for uploading the data into s3 buckets and sending the blob to the Batcher for further processing. The disperser is an untrusted system component.
 
 **Batcher**. The Batcher is an off-chain component which accepts the blob requests from the Disperser and batches multiple blobs together with their KZG commitments into one data packet and send out to the 0G Storage nodes for data storage.
 

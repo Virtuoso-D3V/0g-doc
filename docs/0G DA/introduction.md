@@ -42,7 +42,7 @@ make build
 make run_encoder
 ```
 
-3. Set the cli arguments of run\_batcher in Makefile to proper values. Full list of available configuration parameters are showing below.
+3. Set the cli arguments of run\_batcher in Makefile to proper values. Full list of available configuration parameters are shown below.
 
 ```
 # default

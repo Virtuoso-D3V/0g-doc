@@ -16,8 +16,8 @@ This embedding design brings significant advantages:
 
 - Simplicity: there is no need to maintain a full-fledged consensus protocol, which reduces complexity and enables 0G Storage to focus on decentralized storage service.
 - Safety: the consensus is outsourced to the host blockchain, and hence inherits security of the host blockchain. Typically the more developed host blockchain would provide stronger safety guarantee than a newly-built blockchain.
-- Accessibility: every smart contract on the host blockchain is able to access the original state of ZeroGravity directly, without relying on some trusted off-chain notary. This difference is essential comparing to the projection of an external ledger managed by a third-party.
-- Composability: 0G tokens can always be transferred directly on the host blockchain, like any other ERC20 tokens. This is much more convenient than typical layer-2 ledgers, where transactions are  first processed by layer-2 validators and then committed to the host chain after a significant latency. This feature empowers 0G Storage stronger composability as a new lego to the ecosystem.
+- Accessibility: every smart contract on the host blockchain is able to access the original state of ZeroGravity directly, without relying on some trusted off-chain notary. This difference is essential compared to the projection of an external ledger managed by a third-party.
+- Composability: 0G tokens can always be transferred directly on the host blockchain, like any other ERC20 tokens. This is much more convenient than typical layer-2 ledgers, where transactions are  first processed by layer-2 validators and then committed to the host chain after a significant latency. This feature empowers 0G Storage with stronger composability as a new lego to the ecosystem.
 
 ## Storage Granularity
 
