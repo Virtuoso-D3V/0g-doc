@@ -1,11 +1,12 @@
 # DA Node
 
 This document outlines the steps to become a DA Signer and run your own DA node.
+
 ## DA Signer
 
-To become a DA signer, user need to have enough delegations and register their signer information in the DASigners precompile contract. The registration can be done automatically by running a DA node.
+To become a DA signer, users must have sufficient delegations to validators and register their signer information in the DASigners precompile contract. Registration can be automated by operating a DA node.
 
-See [DASigners](../docs/0G%20Chain/Precompiles/DASigners.md) for more details.
+See [DASigners](../docs/0G%20Chain/Precompiles/DASigners.md#terminology) for more details.
 
 ## DA Node
 

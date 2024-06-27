@@ -17,11 +17,13 @@ EpochBlocks = 5760
 EncodedSlices = 3072
 ```
 
-## Overview
+## Terminology
 
 ### Signer 
 
 Signer is address with enough delegations(at least `TokensPerVote` A0GI) registered in `DASigners` module. Each signer should run a DA node to verify DA blob encoding and generate BLS signature for signed blob. The BLS curve used is BN254 and the public keys of signer is registered in the contract.
+
+Please note that for accounts with delegations to more than 10 validators, only 10 of these delegations are counted and accumulated.
 
 ### Epoch
 
@@ -33,7 +35,7 @@ In an epoch, there can be up to `MaxQuorums` quorums, each quorum is a list of s
 
 ### Vote
 
-Signers can submit their signature of a registration message to request joining the quorums in next epoch. At the beginning of an epoch, the `DASigners` module will calculate the number of votes for the registered signers of this epoch based on their delegation token amount. Every delegated `TokensPerVote` A0GI count as one vote and one signer can have up to `MaxVotesPerSigner` votes. All votes will then be randomly ordered and are divided into quorums.
+Signers can submit their signatures on a registration message to request joining the quorums in the next epoch. At the start of each epoch, the DASigners module calculates the voting power for registered signers based on their delegated token amounts. Each delegated TokensPerVote A0GI counts as one vote, and each signer can have up to MaxVotesPerSigner votes. All votes are then randomly ordered and distributed into quorums.
 
 ## Interface
 
