@@ -1,15 +1,14 @@
-# Storage Node And DA Services
+# Storage Node 
 
-0G System is composed of multiple components, each with its own functionalities. Detailed steps are provided as a guideline to deploy the whole and complete system.
+0G System is composed of multiple components, each with its own functionalities. Detailed steps are provided as a guideline to deploy the storage node.
 
-* [Prerequisite](storage-node-and-da-services.md#prerequisite)
-* [Storage Node](storage-node-and-da-services.md#storage-node)
-* [Storage KV](storage-node-and-da-services.md#storage-kv)
-* [Storage Node CLI](storage-node-and-da-services.md#storage-node-cli)
+* [Prerequisite](storage-node.md#prerequisite)
+* [Storage Node](storage-node.md#storage-node)
+* [Storage Node CLI](storage-node.md#storage-node-cli)
 
 ### Prerequisite
 
-0G Storage and DA services interact with on-chain contracts for blob root confirmation and PoRA mining.
+0G Storage interact with on-chain contracts for blob root confirmation and PoRA mining.
 
 For official deployed contract addresses, visit [this page](../docs/contract-addresses.md).
 
@@ -25,8 +24,6 @@ For official deployed contract addresses, visit [this page](../docs/contract-add
 ```
 
 #### Deployment Steps
-
-First step is to deploy the storage node. As a distributed storage system, the system can have multiple instances.
 
 1. Install dependencies
 
@@ -129,60 +126,5 @@ cd run
 # consider using tmux in order to run in background
 ../target/release/zgs_node --config config.toml
 ```
-
-### Storage KV
-
-Second step is to launch the kv service.
-
-1. Follow the same steps to install dependencies and rust in [Stage 1](storage-node-and-da-services.md#id-2.-storage-node)
-2. Download the source code
-
-```bash
-git clone -b v1.1.0-testnet https://github.com/0glabs/0g-storage-kv.git
-```
-
-3. Build the source code
-
-<pre class="language-bash"><code class="lang-bash">cd 0g-storage-kv
-<strong>git submodule update --init
-</strong>
-# Build in release mode
-cargo build --release
-</code></pre>
-
-4. Copy the `config_example.toml` to `config.toml` and update the parameters
-
-```toml
-# rpc endpoint
-rpc_listen_address
-# ips of storage service, separated by ","
-zgs_node_urls = "http://ip1:port1,http://ip2:port2,..."
-
-# layer one blockchain rpc endpoint
-blockchain_rpc_endpoint
-
-# flow contract address
-log_contract_address
-
-# block number to start the sync, better to align with the config in storage service
-log_sync_start_block_number
-
-# storage nodes to download data from, separated by ","
-# the provided nodes should cover full data in the storage network
-zgs_node_urls
-```
-
-5. Run the kv service
-
-```bash
-cd run
-
-# consider using tmux in order to run in background
-../target/release/zgs_kv --config config.toml
-```
-
-Note: The recommended system configuration is the same as the storage node.
-
-
 
 ### You are all set !
