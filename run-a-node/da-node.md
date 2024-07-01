@@ -48,7 +48,7 @@ eth_rpc_endpoint = "https://rpc-testnet.0g.ai"
 # public grpc service socket address to register in DA contract
 # http://ip:34000 (keep same port as the grpc listen address)
 # or if you have dns, fill https://your.dns.ip
-socket_address = "http://ip:34000"
+socket_address = "http(s)://<public_ip/dns>:34000"
 
 # data availability contract to interact with
 da_entrance_address = ""
