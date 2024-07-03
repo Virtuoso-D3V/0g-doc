@@ -1,4 +1,4 @@
-# Storage Node 
+# Storage Node
 
 0G System is composed of multiple components, each with its own functionalities. Detailed steps are provided as a guideline to deploy the storage node.
 
@@ -67,7 +67,7 @@ Open the package file you downloaded and follow the prompts to install Go.
 4. Then download the source code
 
 ```bash
-git clone -b v0.3.2 https://github.com/0glabs/0g-storage-node.git
+git clone -b v0.3.3 https://github.com/0glabs/0g-storage-node.git
 ```
 
 5. Build the source code
@@ -92,8 +92,8 @@ network_libp2p_port
 # rpc endpoint
 rpc_listen_address
 
-# peer nodes, we provided two nodes, you can also modify to your own ips
-network_boot_nodes = ["/ip4/54.219.26.22/udp/1234/p2p/16Uiu2HAmTVDGNhkHD98zDnJxQWu3i1FL1aFYeh9wiQTNu4pDCgps","/ip4/52.52.127.117/udp/1234/p2p/16Uiu2HAkzRjxK2gorngB1Xq84qDrT4hSVznYDHj6BkbaE4SGx9oS"]
+# peer nodes, we provided 3 nodes with last one being HK region, you can also modify to your own ips
+network_boot_nodes = ["/ip4/54.219.26.22/udp/1234/p2p/16Uiu2HAmTVDGNhkHD98zDnJxQWu3i1FL1aFYeh9wiQTNu4pDCgps","/ip4/52.52.127.117/udp/1234/p2p/16Uiu2HAkzRjxK2gorngB1Xq84qDrT4hSVznYDHj6BkbaE4SGx9oS","/ip4/18.167.69.68/udp/1234/p2p/16Uiu2HAm2k6ua2mGgvZ8rTMV8GhpW71aVzkQWy7D37TTDuLCpgmX"]
 
 # flow contract address
 log_contract_address
@@ -117,6 +117,8 @@ network_dir
 # must fill if you want to participate in the pora and get mining reward
 miner_key
 ```
+
+You can also update the fields in `scripts/update_config.sh` and execute it to modify the config file.
 
 7. Run the storage service
 
