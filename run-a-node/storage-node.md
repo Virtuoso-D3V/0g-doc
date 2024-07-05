@@ -61,7 +61,11 @@ export PATH=$PATH:/usr/local/go/bin
 
 * For Mac
 
-Download the Go installer from [https://go.dev/dl/go1.22.0.darwin-amd64.pkg](https://go.dev/dl/go1.19.3.darwin-amd64.pkg).\
+```bash
+brew install go
+```
+
+Or  download the Go installer from [https://go.dev/dl/](https://go.dev/dl/).\
 Open the package file you downloaded and follow the prompts to install Go.
 
 4. Then download the source code
