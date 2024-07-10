@@ -90,12 +90,6 @@ cargo build --release
 # enr address, must fill your instance's public ip to support peer discovery
 network_enr_address
 
-# p2p port
-network_libp2p_port
-
-# rpc endpoint
-rpc_listen_address
-
 # peer nodes, we provided 3 nodes with last one being HK region, you can also modify to your own ips
 network_boot_nodes = ["/ip4/54.219.26.22/udp/1234/p2p/16Uiu2HAmTVDGNhkHD98zDnJxQWu3i1FL1aFYeh9wiQTNu4pDCgps","/ip4/52.52.127.117/udp/1234/p2p/16Uiu2HAkzRjxK2gorngB1Xq84qDrT4hSVznYDHj6BkbaE4SGx9oS","/ip4/18.167.69.68/udp/1234/p2p/16Uiu2HAm2k6ua2mGgvZ8rTMV8GhpW71aVzkQWy7D37TTDuLCpgmX"]
 
@@ -111,26 +105,31 @@ blockchain_rpc_endpoint
 # block number to start the sync
 log_sync_start_block_number
 
-# location for db, network logs
-db_dir
-network_dir
-
 # your private key with 64 length
 # do not include leading 0x
 # do not omit leading 0
 # must fill if you want to participate in the pora and get mining reward
 miner_key
+
+# The max number of chunk entries to store in db.
+# Each entry is 256B, so the db size is roughly limited to
+# `256 * db_max_num_chunks` Bytes.
+# If this limit is reached, the node will update its `shard_position`
+# and store only half data.
+db_max_num_chunks
 ```
 
 You can also update the fields in `scripts/update_config.sh` and execute it to modify the config file.
 
 7. Run the storage service
 
+Check the command line configuration with `zgs_node -h`
+
 ```shell
 cd run
 
 # consider using tmux in order to run in background
-../target/release/zgs_node --config config.toml
+../target/release/zgs_node --config config-testnet.toml --miner-key <your_private_key> --blockchain-rpc-endpoint <blockchain_rpc> --db-max-num-chunks <max_chunk_num>
 ```
 
 ### You are all set !
