@@ -16,7 +16,7 @@
       * [Mining Reward](<docs/0G Storage/incentive-mechanism/mining-reward.md>)
     * [SDK](docs/0g-storage/sdk.md)
     * [RPC API](docs/0g-storage/rpc-api/README.md)
-      * [Node API](docs/0g-storage/rpc-api/node-api.md)
+      * [Storage Node API](docs/0g-storage/rpc-api/node-api.md)
   * [0G DA](<docs/0G DA/README.md>)
     * [DA Node](docs/0g-da/da-node.md)
     * [DA Client](docs/0g-da/da-client.md)
