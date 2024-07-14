@@ -10,7 +10,7 @@
 
 ## Integration
 
-We provide a [SDK](../0g-storage/rpc-api/sdk.md) for users to easily integrate 0G Storage in their applications with the following features:
+We provide a [SDK](../0g-storage/sdk.md) for users to easily integrate 0G Storage in their applications with the following features:
 
 * File Merkle Tree Class
 * Flow Contract Types

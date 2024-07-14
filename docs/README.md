@@ -20,5 +20,5 @@ In this section we provide a comprehensive suite of resources for developers to 
       3. [Mining Reward](<0G Storage/incentive-mechanism/mining-reward.md>)
    4. [API](0g-storage/rpc-api/)
       1. [Node API](0g-storage/rpc-api/node-api.md)
-3. [SDK](0g-storage/rpc-api/sdk.md)
+3. [SDK](0g-storage/sdk.md)
 4. [Contract Addresses](contract-addresses.md)
