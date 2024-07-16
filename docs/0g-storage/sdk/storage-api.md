@@ -36,4 +36,4 @@ The client can now be used to handle requests to the storage node using the full
 
 #### Full API List&#x20;
 
-The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/node#ZeroGStorageClient).
+The full list of low level client methods can be found at [ZeroGStorageClient](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/node#ZeroGStorageClient). For higher level upload/download functions, please refer to [transfer](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/transfer).
