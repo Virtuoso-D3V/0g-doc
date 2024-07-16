@@ -18,7 +18,6 @@
       * [Storage Node API](docs/0g-storage/rpc/storage-node-api.md)
       * [Storage KV API](docs/0g-storage/rpc/storage-kv-api.md)
     * [Interact with 0G Storage using CLI](docs/0g-storage/interact-with-0g-storage-using-cli/README.md)
-      * [Command-line Options](docs/0g-storage/interact-with-0g-storage-using-cli/command-line-options.md)
       * [indexer](docs/0g-storage/interact-with-0g-storage-using-cli/indexer.md)
       * [upload](docs/0g-storage/interact-with-0g-storage-using-cli/upload.md)
       * [download](docs/0g-storage/interact-with-0g-storage-using-cli/download.md)
