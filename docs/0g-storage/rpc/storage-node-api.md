@@ -1,23 +1,16 @@
 # Storage Node API
 
-## Node API
-
 ### Table of Contents
 
-* Service
-  * Storage Node
-* Data Structure
-  * SegmentWithProof
-  * DataRoot
-  * Segment
-  * FileInfo
-  * Transaction
+* [Methods](storage-node-api.md#methods)
+* [Data Structure](storage-node-api.md#data-structure)
+  * [SegmentWithProof](storage-node-api.md#segmentwithproof)
+  * [DataRoot](storage-node-api.md#dataroot)
+  * [Segment](storage-node-api.md#segment)
+  * [FileInfo](storage-node-api.md#fileinfo)
+  * [Transaction](storage-node-api.md#transaction)
 
-Top
-
-### Service
-
-#### Storage Node
+### Methods
 
 <table><thead><tr><th width="225">Method Name</th><th width="138">Request Type</th><th width="165">Response Type</th><th>Description</th></tr></thead><tbody><tr><td>uploadSegment</td><td>SegmentWithProof</td><td>-</td><td>This uploads segment to storage node</td></tr><tr><td>uploadSegments</td><td>[SegmentWithProof]</td><td>-</td><td>This uploads multiple segments at the same time to the storage node</td></tr><tr><td>downloadSegment</td><td>DataRoot, usize, usize</td><td>Segment</td><td>This download the segment by locating the data with the merkle root, start&#x26;end index</td></tr><tr><td>downloadSegmentWithProof</td><td>DataRoot, usize</td><td>SegmentWithProof</td><td>This downoads segment with the merkle proof</td></tr><tr><td>getFileInfo</td><td>DataRoot</td><td>FileInfo</td><td>This gets the file information given the data merkle root</td></tr><tr><td>getFileInfoByTxSeq</td><td>u64</td><td>FileInfo</td><td>This gets the file information by querying the correponsing sequence index</td></tr></tbody></table>
 

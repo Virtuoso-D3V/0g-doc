@@ -9,7 +9,7 @@ A client is instantiated with a raw url through the following example.
 <pre class="language-go"><code class="lang-go">import "github.com/0glabs/0g-storage-client/node"
 
 // create instance of a client
-<strong>cl, err := node.NewClient("http://storage-ip:5678")
+<strong>cl, err := node.NewClient("http://localhost:5678")
 </strong>if err != nil {
     panic(err)
 }

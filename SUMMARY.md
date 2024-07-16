@@ -24,6 +24,7 @@
         * [download](docs/0g-storage/sdk/how-to-use/download.md)
       * [Go API](docs/0g-storage/sdk/rpc-api/README.md)
         * [Storage Node API](docs/0g-storage/sdk/rpc-api/storage-node-api.md)
+        * [Storage KV API](docs/0g-storage/sdk/rpc-api/storage-kv-api.md)
   * [0G DA](<docs/0G DA/README.md>)
     * [DA Node](docs/0g-da/da-node.md)
     * [DA Client](docs/0g-da/da-client.md)
