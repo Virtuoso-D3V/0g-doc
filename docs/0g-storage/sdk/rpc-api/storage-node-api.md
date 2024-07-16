@@ -21,10 +21,14 @@ sn := cl.ZeroGStorage()
 
 The client can now be used to handle requests to the storage node using the full JSON-RPC API. For example, the function `GetStatus()` wraps a call to the `zgs_getStatus` endpoint. To fetch the file info from the client, the following example can be used.
 
-<pre class="language-go"><code class="lang-go">import "github.com/ethereum/go-ethereum/common"
-<strong>
+<pre class="language-go"><code class="lang-go">import (
+    "context"
+    "github.com/ethereum/go-ethereum/common"
+<strong>)
+</strong><strong>
+</strong><strong>ctx := context.Background()
 </strong><strong>fileRoot := common.HexToHash()
-</strong><strong>fileInfo, err := sn.GetFileInfo(fileRoot)
+</strong><strong>fileInfo, err := sn.GetFileInfo(ctx, fileRoot)
 </strong>if err != nil {
     return err
 }

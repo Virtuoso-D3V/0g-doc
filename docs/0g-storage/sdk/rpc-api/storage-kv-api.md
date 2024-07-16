@@ -19,12 +19,27 @@ A client is instantiated through the following example.
 }
 
 // create the kv client with the node client
-kvClient := kv.NewClient(client, nil)
+kvClient := kv.NewClient(client)
 </code></pre>
+
+#### Interacting with the client <a href="#interacting-with-a-client" id="interacting-with-a-client"></a>
+
+Similar to [Storage Node API](storage-kv-api.md#interacting-with-a-client), a user can call KV client RPC with the following example
+
+```go
+import (
+    "context"
+)
+
+ctx := context.Background()
+streamIds, err := kvClient.GetHoldingStreamIds(ctx)
+```
+
+&#x20;The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/kv#Client).
 
 #### Writing data to client <a href="#querying-client-for-data" id="querying-client-for-data"></a>
 
-The write operation of storage kv is actually similar to writing file to storage node. It will first stream the key-value pairs to streaming data. Then it encodes the data to the same format that a file data has. After data processing, it calls the same API with the storage node upload operation to send the data to storage node. An example of kv write is as follows.
+The write operation of Storage KV is actually similar to writing file to storage node. It will first stream the key-value pairs to streaming data. Then it encodes the data to the same format that a file data has. After data processing, it calls the same API with the storage node upload operation to send the data to storage node. An example of Storage KV write is as follows.
 
 <pre class="language-go"><code class="lang-go"><strong>import (
 </strong><strong>    "github.com/0glabs/0g-storage-client/common/blockchain"
