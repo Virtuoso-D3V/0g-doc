@@ -34,6 +34,74 @@ The client can now be used to handle requests to the storage node using the full
 }
 </code></pre>
 
+To upload files, a user can use the following example
+
+\`
+
+<pre class="language-go"><code class="lang-go"><strong>import (    
+</strong><strong>    "github.com/0glabs/0g-storage-client/transfer"
+</strong><strong>    "github.com/ethereum/go-ethereum/common/hexutil"
+</strong>    "github.com/0glabs/0g-storage-client/common/blockchain"
+    "github.com/0glabs/0g-storage-client/contract"
+    "github.com/0glabs/0g-storage-client/core"
+<strong>)
+</strong><strong>
+</strong><strong>// Set the parameters
+</strong>args := uploadArgs{
+    file:     "test.txt",
+    tags:     "0x",
+    url:      "https://rpc-testnet.0g.ai",
+    contract: "0x8873cc79c5b3b5666535C825205C9a128B1D75F1",
+    key:      "abc",
+    expectedReplica: 1,
+    finalityRequired:    true,
+    skpTx: false,
+    taskSize: 10,
+}
+
+// create a flow instance
+w3client := blockchain.MustNewWeb3(args.url, args.key)
+defer w3client.Close()
+contractAddr := common.HexToAddress(args.contract)
+flow, err := contract.NewFlowContract(contractAddr, w3client)
+if err != nil {
+    return
+}
+
+// create 0g storage clients
+clients := node.MustNewZgsClients(uploadArgs.url)
+for _, client := range clients {
+    defer client.Close()
+}
+
+// create uploader
+uploader, err := transfer.NewUploader(flow, clients)
+if err != nil {
+    return
+}
+
+// set upload options
+opt := transfer.UploadOption{
+    Tags:             hexutil.MustDecode(args.tags),
+    FinalityRequired: args.finalityRequired,
+    TaskSize:         args.taskSize,
+    ExpectedReplica:  args.expectedReplica,
+    SkipTx:           args.skipTx,
+}
+
+// read the file data
+file, err := core.Open(args.file)
+if err != nil {
+    return
+}
+defer file.Close()
+
+// upload the file
+if err := uploader.Upload(ctx, file, opt); err != nil {
+    return
+}
+</code></pre>
+
 #### Full API List&#x20;
 
 The full list of low level client methods can be found at [ZeroGStorageClient](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/node#ZeroGStorageClient). For higher level upload/download functions, please refer to [transfer](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/transfer).
