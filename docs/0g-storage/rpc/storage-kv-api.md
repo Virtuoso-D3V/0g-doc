@@ -4,11 +4,8 @@
 
 * [Methods](storage-kv-api.md#methods)
 * [Data Structure](storage-kv-api.md#data-structure)
-  * [SegmentWithProof](storage-kv-api.md#segmentwithproof)
-  * [DataRoot](storage-kv-api.md#dataroot)
-  * [Segment](storage-kv-api.md#segment)
-  * [FileInfo](storage-kv-api.md#fileinfo)
-  * [Transaction](storage-kv-api.md#transaction)
+  * [ValueSegment](storage-kv-api.md#valuesegment)
+  * [KeyValueSegment](storage-kv-api.md#keyvaluesegment)
 
 ### Methods
 
