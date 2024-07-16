@@ -23,6 +23,8 @@
         * [indexer](docs/0g-storage/sdk/how-to-use/indexer.md)
         * [upload](docs/0g-storage/sdk/how-to-use/upload.md)
         * [download](docs/0g-storage/sdk/how-to-use/download.md)
+        * [kv-write](docs/0g-storage/sdk/how-to-use/kv-write.md)
+        * [kv-read](docs/0g-storage/sdk/how-to-use/kv-read.md)
       * [Go API](docs/0g-storage/sdk/rpc-api/README.md)
         * [Storage Node API](docs/0g-storage/sdk/rpc-api/storage-node-api.md)
         * [Storage KV API](docs/0g-storage/sdk/rpc-api/storage-kv-api.md)

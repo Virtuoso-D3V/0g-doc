@@ -20,6 +20,8 @@ Available Commands:
   gen         Generate a temp file for test purpose
   help        Help about any command
   indexer     Start indexer service
+  kv-read     read kv streams
+  kv-write    write to kv streams
   upload      Upload file to ZeroGStorage network
 
 Flags:

@@ -4,9 +4,9 @@ The `upload` subcommand uploads the user specified file to a storage endpoint. T
 
 ```bash
 ./0g-storage-client upload \
-    --url https://rpc-testnet.0g.ai \
-    --contract 0x8873cc79c5b3b5666535C825205C9a128B1D75F1 \
-    --node https://rpc-storage-testnet.0g.ai \
+    --url <blockchain_rpc> \
+    --contract <flow_contract> \
+    --node <storage_node_rpc> \
     --file <file_path> \
     --key <private_key>
 ```
