@@ -24,6 +24,7 @@ To use it, run
     --task-size <segment_count_in_single_rpc_request> \
     --key <private_key> \
     --expected-replica <n_replica> \
+    --version <version_number> \
     (--finality-required) \
     (--skip-tx)
 ```
@@ -34,6 +35,7 @@ To use it, run
 * Use either `--node` or `--indexer` to define the storage location.
 * `--stream-keys` and `--stream-values` should match the position of a key-value pair.
 * `--task-size` is the number of segment to upload for each rpc request to storage node
+* `--version` is the version number for each key to control the parallel access to the key. For example, a user is updating a key `b` using the value from key `a`. While updating, he reads that `a` has version number `10`. Also, during the update, another user is updating `a`, and the version number is updated to `20`. Both transactions are submitted on chain with the tx to update `a` before the tx to update `c`. When the kv instance is replaying the onchain logs, it will first update a and set its version number to `20`. Then when it executes the second transaction, it finds that the version of `a` is `10` which is smaller than `20`. So the second transaction is discarded.
 * `--finality-required` is the flag for whether to wait for log finality
 * `--skip-tx` is the flag for skipping tx if the data is already uploaded before (has same data root)
 
