@@ -33,6 +33,10 @@ import (
 
 ctx := context.Background()
 streamIds, err := kvClient.GetHoldingStreamIds(ctx)
+// this api is used to check whether the kv operation is truly successful
+// on the kv node, so this transaction is not the onchain transaction
+// but rather the kv db operation.
+isSuccessful, err := kvClient.GetTransactionResult(ctx, <seq_number>)
 ```
 
 &#x20;The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/kv#Client).
