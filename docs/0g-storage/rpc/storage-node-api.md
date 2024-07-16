@@ -28,11 +28,11 @@
 
 #### DataRoot
 
-DataRoot = H256
+`DataRoot = H256`
 
 #### Segment
 
-Segment = \[u8]
+`Segment = [u8]`
 
 #### FileInfo
 

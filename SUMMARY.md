@@ -16,6 +16,7 @@
       * [Mining Reward](<docs/0G Storage/incentive-mechanism/mining-reward.md>)
     * [RPC](docs/0g-storage/rpc/README.md)
       * [Storage Node API](docs/0g-storage/rpc/storage-node-api.md)
+      * [Storage KV API](docs/0g-storage/rpc/storage-kv-api.md)
     * [SDK](docs/0g-storage/sdk/README.md)
       * [How to use](docs/0g-storage/sdk/how-to-use/README.md)
         * [Command-line Options](docs/0g-storage/sdk/how-to-use/command-line-options.md)
