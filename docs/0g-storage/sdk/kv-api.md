@@ -1,4 +1,4 @@
-# Storage KV API
+# KV API
 
 #### Instantiating a client <a href="#instantiating-a-client" id="instantiating-a-client"></a>
 
@@ -24,7 +24,7 @@ kvClient := kv.NewClient(client)
 
 #### Interacting with the client <a href="#interacting-with-a-client" id="interacting-with-a-client"></a>
 
-Similar to [Storage Node API](storage-kv-api.md#interacting-with-a-client), a user can call KV client RPC with the following example
+Similar to [Storage Node API](kv-api.md#interacting-with-a-client), a user can call KV client RPC with the following example
 
 ```go
 import (
@@ -38,8 +38,6 @@ streamIds, err := kvClient.GetHoldingStreamIds(ctx)
 // but rather the kv db operation.
 isSuccessful, err := kvClient.GetTransactionResult(ctx, <seq_number>)
 ```
-
-&#x20;The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/kv#Client).
 
 #### Writing data to client <a href="#querying-client-for-data" id="querying-client-for-data"></a>
 
@@ -107,3 +105,7 @@ key := []byte("TESTKEY0")
 val, _ := kvClient.GetValue(ctx, streamId, key)
 fmt.Println(string(val.Data))
 ```
+
+#### Full API List&#x20;
+
+The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/kv#Client).

@@ -1,4 +1,4 @@
-# Storage Node API
+# Storage API
 
 #### Instantiating a client <a href="#instantiating-a-client" id="instantiating-a-client"></a>
 
@@ -34,4 +34,6 @@ The client can now be used to handle requests to the storage node using the full
 }
 </code></pre>
 
-&#x20;The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/node#ZeroGStorageClient).
+#### Full API List&#x20;
+
+The full list of client methods can be found [here](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/node#ZeroGStorageClient).

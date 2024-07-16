@@ -1,6 +1,6 @@
-# Go API
+# Go SDK
 
-This page provides a high-level overview of the Go API.
+This page provides a high-level overview of the Go SDK.
 
 0G ships official Go packages that can be embedded into third party desktop and server applications. There is also a [TS API](https://github.com/0glabs/0g-ts-sdk) that can be used to embed 0G Storage into web applications.
 
