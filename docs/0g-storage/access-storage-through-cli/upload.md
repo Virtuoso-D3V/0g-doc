@@ -3,12 +3,21 @@
 The `upload` subcommand uploads the user specified file to a storage endpoint. To use it
 
 ```bash
-0g-storage-client upload \
-    --url <blockchain_rpc> \
-    --contract <flow_contract> \
-    --node <storage_node_rpc> \
-    --file <file_path> \
-    --key <private_key>
+Usage:
+  0g-storage-client upload [flags]
+
+Flags:
+      --contract string         ZeroGStorage smart contract to interact with
+      --expected-replica uint   expected number of replications to upload (default 1)
+      --file string             File name to upload
+      --finality-required       Wait for file finality on nodes to upload
+      --indexer string          ZeroGStorage indexer URL
+      --key string              Private key to interact with smart contract
+      --node strings            ZeroGStorage storage node URL
+      --skip-tx                 Skip sending the transaction on chain
+      --tags string             Tags of the file (default "0x")
+      --task-size uint          Number of segments to upload in single rpc request (default 10)
+      --url string              Fullnode URL to interact with ZeroGStorage smart contract
 ```
 
 The `key` is your account's private key.
@@ -17,7 +26,7 @@ The `key` is your account's private key.
 
 ```bash
 > 0g-storage-client upload --url https://rpc-testnet.0g.ai --contract 0x8873cc79c5b3b5666535C825205C9a128B1D75F1 --node 	
-https://rpc-storage-testnet.0g.ai --file tmpFile --key abcdefg...
+https://rpc-storage-testnet.0g.ai --file tmpFile --key abc...
 
 INFO[2024-07-15T16:34:36+08:00] Data prepared to upload                       chunks=2 segments=1 size=316
 INFO[2024-07-15T16:34:36+08:00] Data merkle root calculated                   root=0x1623b89521bbdde2856fa341fa9e466995f79f9e0b5f0190278b04b64cc3fd5f

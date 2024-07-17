@@ -1,24 +1,31 @@
 # indexer
 
-The `indexer` subcommand allows a user to start a global indexing service for data upload/download. Since we split the file into chunks for data storage and replication, each chunk may be stored on different storage node. A indexing service can track the metadata of the file storage position during upload and use the corresponding storage node to download different chunks to get the whole file. To use it
+Due to the sharding mechanism, when the entire network data volume increases, an upload or download request for a single file may need to transfer data between multiple different storage nodes, how to find suitable storage nodes may become a problem for ordinary users.
+
+Indexer is a service used to provide storage node queries, it is usually run by groups or individuals who maintain some stable storage nodes. It returns the trusted node list it maintains or the node list discovered through the p2p network to the user. To run an indexer service:
 
 ```bash
-0g-storage-client indexer \
-    --endpoint <:port> \
-    --trusted <node1_ip>,<node2_ip> \
-    --node <node_admin_ip> \
-    --update-interval <interval_between_shard_update> \
-    --discover-interval <interval_between_node_discovery>
+Usage:
+  0g-storage-client indexer [flags]
+
+Flags:
+      --discover-interval duration            Interval to discover peers in network (default 10m0s)
+      --endpoint string                       Indexer RPC endpoint (default ":12345")
+      --ip-location-cache-file string         File name to cache ip locations (default ".ip-location-cache.json")
+      --ip-location-cache-interval duration   Interval to write ip locations to cache file (default 10m0s)
+      --node string                           Storage node to discover peers in P2P network
+      --trusted strings                       Trusted storage node URLs that separated by comma
+      --update-interval duration              Interval to update shard config of discovered peers (default 10m0s)
 ```
 
 **Explanation:**
 
-* trusted
+* P2P node discovery is enabled by set `--node`, the indexer service uses peer list of the storage node to update its own node list.
 
 **Example:**
 
 ```bash
-> 0g-storage-client indexer --endpoint :12345 --node http://ip1:5679 --trusted http://ip1:5678
+> 0g-storage-client indexer --endpoint :12345 --trusted http://ip1:5678,http://ip2:5678
 ```
 
-Nothing will print out in the console. You can run it in backend to start listening to the endpoint and serve.
+This command will start an indexer service listening to port 12345.

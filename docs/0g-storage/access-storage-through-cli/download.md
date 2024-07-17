@@ -3,10 +3,14 @@
 The `download` subcommand downloads the user specified file from a storage endpoint. To use it
 
 ```
-0g-storage-client download \
-    --node <storage_node_rpc>
-    --file <file_name> 
-    --root <file_root_hash>
+Usage:
+  0g-storage-client download [flags]
+
+Flags:
+      --file string    File name to download
+      --node strings   ZeroGStorage storage node URL. Multiple nodes could be specified and separated by comma, e.g. url1,url2,url3
+      --proof          Whether to download with merkle proof for validation
+      --root string    Merkle root to download file
 ```
 
 Refer to the [upload](upload.md) page for the file root hash.
