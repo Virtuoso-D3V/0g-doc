@@ -84,7 +84,7 @@ git submodule update --init
 cargo build --release
 ```
 
-6. Update the `run/config.toml`
+6. Check and update the `run/config.toml` if necessary.
 
 ```toml
 # enr address, must fill your instance's public ip to support peer discovery
@@ -119,11 +119,11 @@ miner_key
 db_max_num_chunks
 ```
 
-You can also update the fields in `scripts/update_config.sh` and execute it to modify the config file.
-
 7. Run the storage service
 
 Check the command line configuration with `zgs_node -h`
+
+We provide a `run/config-testnet.toml` for testnet usage.
 
 ```shell
 cd run
