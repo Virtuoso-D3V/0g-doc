@@ -13,7 +13,7 @@ The workflow of KV write is as follows:
 To use it, run
 
 ```bash
-./0g-storage-client kv-write \
+0g-storage-client kv-write \
     --url <blockchain_rpc> \
     --contract <flow_contract> \
     --indexer <indexer_rpc> \
@@ -42,7 +42,7 @@ To use it, run
 **Example:**
 
 ```bash
-> ./0g-storage-client kv-write \
+> 0g-storage-client kv-write \
     --url https://rpc-testnet.0g.ai \
     --contract 0x8873cc79c5b3b5666535C825205C9a128B1D75F1 \
     --node https://rpc-storage-testnet.0g.ai \

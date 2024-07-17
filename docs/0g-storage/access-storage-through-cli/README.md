@@ -1,9 +1,35 @@
-# Interact with 0G Storage using CLI
+# Access Storage through CLI
+
+An end user can use 0G Storage CLI to easily upload/download data to 0G Storage System.
+
+### Installation
+
+1. Download the source code
+
+```bash
+git clone https://github.com/0glabs/0g-storage-client.git
+```
+
+2. Build the binary (make sure you install [go](https://go.dev/doc/install) first)
+
+```bash
+cd 0g-storage-client
+go build
+```
+
+3. Add the binary to GOPATH
+
+```bash
+mv 0g-storage-client ~/go/bin
+export PATH=~/go/bin:$PATH
+```
+
+### Command Line Entrance
 
 The command-line help listing is reproduced below for your convenience. The same information can be obtained at any time from your own client by running
 
 ```bash
-./0g-storage-client --help
+0g-storage-client --help
 ```
 
 ```bash

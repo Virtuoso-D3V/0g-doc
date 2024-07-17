@@ -3,7 +3,7 @@
 The `upload` subcommand uploads the user specified file to a storage endpoint. To use it
 
 ```bash
-./0g-storage-client upload \
+0g-storage-client upload \
     --url <blockchain_rpc> \
     --contract <flow_contract> \
     --node <storage_node_rpc> \
@@ -16,7 +16,7 @@ The `key` is your account's private key.
 **Example:**
 
 ```bash
->./0g-storage-client upload --url https://rpc-testnet.0g.ai --contract 0x8873cc79c5b3b5666535C825205C9a128B1D75F1 --node 	
+> 0g-storage-client upload --url https://rpc-testnet.0g.ai --contract 0x8873cc79c5b3b5666535C825205C9a128B1D75F1 --node 	
 https://rpc-storage-testnet.0g.ai --file tmpFile --key abcdefg...
 
 INFO[2024-07-15T16:34:36+08:00] Data prepared to upload                       chunks=2 segments=1 size=316
@@ -34,13 +34,13 @@ INFO[2024-07-15T16:36:03+08:00] upload took                                   du
 To generate a random testing file, run
 
 ```bash
-./0g-storage-client gen --file <file_name> --size <file_size_in_bytes>
+0g-storage-client gen --file <file_name> --size <file_size_in_bytes>
 ```
 
 Example:
 
 ```bash
-> ./0g-storage-client gen --file tmpFile
+> 0g-storage-client gen --file tmpFile
 
 INFO[2024-07-15T16:02:52+08:00] Succeeded to write file file=tmpFile root=0x1623b89521bbdde2856fa341fa9e466995f79f9e0b5f0190278b04b64cc3fd5f
 ```
