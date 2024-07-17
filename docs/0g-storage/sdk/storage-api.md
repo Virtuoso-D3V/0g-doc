@@ -36,8 +36,6 @@ The client can now be used to handle requests to the storage node using the full
 
 To upload files, a user can use the following example
 
-\`
-
 <pre class="language-go"><code class="lang-go"><strong>import (    
 </strong><strong>    "github.com/0glabs/0g-storage-client/transfer"
 </strong><strong>    "github.com/ethereum/go-ethereum/common/hexutil"
