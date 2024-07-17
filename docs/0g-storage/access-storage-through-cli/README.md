@@ -1,6 +1,6 @@
 # Access Storage through CLI
 
-An end user can use 0G Storage CLI to easily upload/download data to 0G Storage System.
+There are two ways a user can access the 0G Storage System. The first simple and straightforward way is to use our [web tool](https://storagescan-newton.0g.ai/tool). If a user wants more control on the data location and versioning, he can use 0G Storage CLI to easily upload/download data to 0G Storage System. This section introduces the 0G Storage CLI in detail, including subcommands for storage and kv operations, in order for users to use through terminal. Users can develop their own scripts, e.g. regular log uploading cron jobs, with the CLI tool.
 
 ### Installation
 
@@ -32,7 +32,7 @@ The command-line help listing is reproduced below for your convenience. The same
 0g-storage-client --help
 ```
 
-```bash
+```
 ZeroGStorage client to interact with ZeroGStorage network
 
 Usage:

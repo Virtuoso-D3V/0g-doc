@@ -36,8 +36,6 @@ The client can now be used to handle requests to the storage node using the full
 
 To upload files, a user can use the following example
 
-\`
-
 <pre class="language-go"><code class="lang-go"><strong>import (    
 </strong><strong>    "github.com/0glabs/0g-storage-client/transfer"
 </strong><strong>    "github.com/ethereum/go-ethereum/common/hexutil"
@@ -101,6 +99,24 @@ if err := uploader.Upload(ctx, file, opt); err != nil {
     return
 }
 </code></pre>
+
+To use indexer in the code
+
+```go
+import (
+    "logrus"
+    "github.com/0glabs/0g-storage-client/indexer"
+    zg_common "github.com/0glabs/0g-storage-client/common"
+)
+// instantiate a indexer client with logging configuration
+indexerClient, err := indexer.NewClient(args.indexer, indexer.IndexerClientOption{LogOption: zg_common.LogOption{Logger: logrus.StandardLogger()}})
+if err != nil {
+    return
+}
+if err := indexerClient.Upload(ctx, flow, file, opt); err != nil {
+    return
+}
+```
 
 #### Full API List&#x20;
 

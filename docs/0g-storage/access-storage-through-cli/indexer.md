@@ -18,7 +18,11 @@ Flags:
       --update-interval duration              Interval to update shard config of discovered peers (default 10m0s)
 ```
 
-Example:
+**Explanation:**
+
+* P2P node discovery is enabled by set `--node`, the indexer service uses peer list of the storage node to update its own node list.
+
+**Example:**
 
 ```bash
 > 0g-storage-client indexer --endpoint :12345 --trusted http://ip1:5678,http://ip2:5678
