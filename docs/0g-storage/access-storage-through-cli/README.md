@@ -32,7 +32,7 @@ The command-line help listing is reproduced below for your convenience. The same
 0g-storage-client --help
 ```
 
-```bash
+```
 ZeroGStorage client to interact with ZeroGStorage network
 
 Usage:

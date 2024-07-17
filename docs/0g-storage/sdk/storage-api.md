@@ -102,6 +102,24 @@ if err := uploader.Upload(ctx, file, opt); err != nil {
 }
 </code></pre>
 
+To use indexer in the code
+
+```go
+import (
+    "logrus"
+    "github.com/0glabs/0g-storage-client/indexer"
+    zg_common "github.com/0glabs/0g-storage-client/common"
+)
+// instantiate a indexer client with logging configuration
+indexerClient, err := indexer.NewClient(args.indexer, indexer.IndexerClientOption{LogOption: zg_common.LogOption{Logger: logrus.StandardLogger()}})
+if err != nil {
+    return
+}
+if err := indexerClient.Upload(ctx, flow, file, opt); err != nil {
+    return
+}
+```
+
 #### Full API List&#x20;
 
 The full list of low level client methods can be found at [ZeroGStorageClient](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/node#ZeroGStorageClient). For higher level upload/download functions, please refer to [transfer](https://pkg.go.dev/github.com/0glabs/0g-storage-client@v0.3.0/transfer).
