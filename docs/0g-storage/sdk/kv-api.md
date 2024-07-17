@@ -33,7 +33,7 @@ import (
 
 ctx := context.Background()
 streamIds, err := kvClient.GetHoldingStreamIds(ctx)
-// this api is used to check whether the kv operation is truly successful
+// this api is used to check whether the kv operation is successfully commit 
 // on the kv node, so this transaction is not the onchain transaction
 // but rather the kv db operation.
 isSuccessful, err := kvClient.GetTransactionResult(ctx, <seq_number>)

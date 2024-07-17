@@ -3,10 +3,14 @@
 The `kv-read`subcommand reads the user specified keys which were stored in the key-value database from a kv node endpoint. To use it
 
 ```
-0g-storage-client kv-read \
-    --node <kv_node_rpc> \
-    --stream-id <stream_id_of_keys> \
-    --stream-keys <keys_separated_by_comma>
+Usage:
+  0g-storage-client kv-read [flags]
+
+Flags:
+      --node string           kv node url
+      --stream-id string      stream to read/write (default "0x")
+      --stream-keys strings   kv keys
+      --version uint          key version (default 18446744073709551615)
 ```
 
 **Example:**
