@@ -49,6 +49,7 @@ To upload files, a user can use the following example
     file:     "test.txt",
     tags:     "0x",
     url:      "https://rpc-testnet.0g.ai",
+    indexer:  "http://ip:12345",
     contract: "0x8873cc79c5b3b5666535C825205C9a128B1D75F1",
     key:      "abc",
     expectedReplica: 1,
