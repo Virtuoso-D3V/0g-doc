@@ -43,5 +43,6 @@
   * [DA Client](run-a-node/da-client.md)
   * [DA Encoder](run-a-node/da-encoder.md)
   * [DA Node](run-a-node/da-node.md)
+  * [DA Retriever](run-a-node/da-retriever.md)
 * [Contributing](contributing.md)
 * [Whitepaper](whitepaper.md)
