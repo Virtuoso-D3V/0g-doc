@@ -8,14 +8,9 @@ A client is instantiated with a raw url through the following example.
 
 <pre class="language-go"><code class="lang-go">import "github.com/0glabs/0g-storage-client/node"
 
-// create instance of a client
-<strong>cl, err := node.NewClient("http://localhost:5678")
-</strong>if err != nil {
-    panic(err)
-}
-// storage node client can be retrieved by
-sn := cl.ZeroGStorage()
-</code></pre>
+// create instance of a 0g storage client
+<strong>cl := node.MustNewZgsClient("http://localhost:5678")
+</strong></code></pre>
 
 #### Interacting with the client <a href="#interacting-with-a-client" id="interacting-with-a-client"></a>
 
@@ -28,7 +23,7 @@ The client can now be used to handle requests to the storage node using the full
 </strong><strong>
 </strong><strong>ctx := context.Background()
 </strong><strong>fileRoot := common.HexToHash()
-</strong><strong>fileInfo, err := sn.GetFileInfo(ctx, fileRoot)
+</strong><strong>fileInfo, err := cl.GetFileInfo(ctx, fileRoot)
 </strong>if err != nil {
     return err
 }
@@ -54,7 +49,7 @@ To upload files, a user can use the following example
     key:      "abc",
     expectedReplica: 1,
     finalityRequired:    true,
-    skpTx: false,
+    skipTx: false,
     taskSize: 10,
 }
 
