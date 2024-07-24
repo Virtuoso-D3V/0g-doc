@@ -7,10 +7,11 @@ Usage:
   0g-storage-client download [flags]
 
 Flags:
-      --file string    File name to download
-      --node strings   ZeroGStorage storage node URL. Multiple nodes could be specified and separated by comma, e.g. url1,url2,url3
-      --proof          Whether to download with merkle proof for validation
-      --root string    Merkle root to download file
+      --file string      File name to download
+      --indexer string   ZeroGStorage indexer URL
+      --node strings     ZeroGStorage storage node URL. Multiple nodes could be specified and separated by comma, e.g. url1,url2,url3
+      --proof            Whether to download with merkle proof for validation
+      --root string      Merkle root to download file
 ```
 
 Refer to the [upload](upload.md) page for the file root hash.
