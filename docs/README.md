@@ -12,7 +12,7 @@ In this section we provide a comprehensive suite of resources for developers to 
    1. [Introduction](broken-reference)
    2. [Architecture](<0G Storage/architecture.md>)
       1. [Log System](<0G Storage/log-system.md>)
-      2. [K-V Store](<0G Storage/k-v-store.md>)
+      2. [K-V Store](0g-storage/k-v-store/)
       3. [Transaction Processing](<0G Storage/transaction-processing.md>)
    3. [Incentive Mechanism](<0G Storage/incentive-mechanism/>)
       1. [Proof of Random Access (PoRA)](<0G Storage/incentive-mechanism/proof-of-random-access.md>)
