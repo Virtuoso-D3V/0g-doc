@@ -214,6 +214,6 @@ Follow the same setup process above to start syncing your node to the latest blo
 Once you finished syncing the blocks.
 
 1. Stop your new server.
-2. Copy and past the files mentioned in [#important-files](validator-node.md#important-files "mention") to the `$HOME` on your new server.
+2. Copy and past the files mentioned in [#important-files](./#important-files "mention") to the `$HOME` on your new server.
 3. Stop your old server.
 4. Restart your new server.
