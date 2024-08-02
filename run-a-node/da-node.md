@@ -25,6 +25,7 @@ Each DA signer need to operate a DA node to perform encoded blob data verificati
 
 ```
 git clone https://github.com/0glabs/0g-da-node.git
+git checkout tags/v1.0.1 -b v1.0.1
 cargo build --release
 ./dev_support/download_params.sh
 ```
