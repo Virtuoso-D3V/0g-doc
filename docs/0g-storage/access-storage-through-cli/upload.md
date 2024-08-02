@@ -14,7 +14,7 @@ Flags:
       --indexer string          ZeroGStorage indexer URL
       --key string              Private key to interact with smart contract
       --node strings            ZeroGStorage storage node URL
-      --skip-tx                 Skip sending the transaction on chain
+      --skip-tx                 Skip sending the transaction on chain if already exists (default true)
       --tags string             Tags of the file (default "0x")
       --task-size uint          Number of segments to upload in single rpc request (default 10)
       --url string              Fullnode URL to interact with ZeroGStorage smart contract

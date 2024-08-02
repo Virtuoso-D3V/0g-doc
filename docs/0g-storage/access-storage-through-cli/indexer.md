@@ -11,8 +11,11 @@ Usage:
 Flags:
       --discover-interval duration            Interval to discover peers in network (default 10m0s)
       --endpoint string                       Indexer RPC endpoint (default ":12345")
-      --ip-location-cache-file string         File name to cache ip locations (default ".ip-location-cache.json")
+      --file-location-cache-expiry duration   Validity period of location information (default 24h0m0s)
+      --file-location-cache-size int          size of file location cache (default 100000)
+      --ip-location-cache-file string         File name to cache IP locations (default ".ip-location-cache.json")
       --ip-location-cache-interval duration   Interval to write ip locations to cache file (default 10m0s)
+      --ip-location-token string              Access token to retrieve IP location from ipinfo.io
       --node string                           Storage node to discover peers in P2P network
       --trusted strings                       Trusted storage node URLs that separated by comma
       --update-interval duration              Interval to update shard config of discovered peers (default 10m0s)
