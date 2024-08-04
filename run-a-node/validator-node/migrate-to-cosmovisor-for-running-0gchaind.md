@@ -24,7 +24,7 @@ Use the whereis command to confirm the path of your 0gchaind binary: `whereis 0g
 
 #### Step 5: Start 0gchaind Using Cosmovisor
 
-Start 0gchaind using Cosmovisor with the following command: `cosmovisor start [flags]`
+Start 0gchaind using Cosmovisor with the following command: `cosmovisor run start [flags]`
 
 ### Troubleshooting
 
