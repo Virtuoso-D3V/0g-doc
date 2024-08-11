@@ -31,8 +31,11 @@ The client can now be used to handle requests to the storage node using the full
 
 To upload files, a user can use the following example
 
-<pre class="language-go"><code class="lang-go"><strong>import (    
-</strong><strong>    "github.com/0glabs/0g-storage-client/transfer"
+<pre class="language-go"><code class="lang-go"><strong>import (
+</strong><strong>    "logrus"
+</strong>    "github.com/0glabs/0g-storage-client/indexer"
+    zg_common "github.com/0glabs/0g-storage-client/common"
+<strong>    "github.com/0glabs/0g-storage-client/transfer"
 </strong><strong>    "github.com/ethereum/go-ethereum/common/hexutil"
 </strong>    "github.com/0glabs/0g-storage-client/common/blockchain"
     "github.com/0glabs/0g-storage-client/contract"
@@ -45,12 +48,13 @@ To upload files, a user can use the following example
     tags:     "0x",
     url:      "https://rpc-testnet.0g.ai",
     indexer:  "http://ip:12345",
-    contract: "0x8873cc79c5b3b5666535C825205C9a128B1D75F1",
-    key:      "abc",
+    contract: "0xabc", // flow contract address
+    key:      "abc", // private key
     expectedReplica: 1,
     finalityRequired:    true,
     skipTx: false,
     taskSize: 10,
+    fee: 0, // optional, can remove and let the program to compute the fee automatically
 }
 
 // create a flow instance
@@ -62,14 +66,8 @@ if err != nil {
     return
 }
 
-// create 0g storage clients
-clients := node.MustNewZgsClients(uploadArgs.url)
-for _, client := range clients {
-    defer client.Close()
-}
-
-// create uploader
-uploader, err := transfer.NewUploader(flow, clients)
+// instantiate a indexer client with logging configuration
+indexerClient, err := indexer.NewClient(args.indexer, indexer.IndexerClientOption{LogOption: zg_common.LogOption{Logger: logrus.StandardLogger()}})
 if err != nil {
     return
 }
@@ -81,6 +79,7 @@ opt := transfer.UploadOption{
     TaskSize:         args.taskSize,
     ExpectedReplica:  args.expectedReplica,
     SkipTx:           args.skipTx,
+    Fee:              args.Fee, // can remove
 }
 
 // read the file data
@@ -91,25 +90,21 @@ if err != nil {
 defer file.Close()
 
 // upload the file
-if err := uploader.Upload(ctx, file, opt); err != nil {
+if err := indexerClient.Upload(ctx, flow, file, opt); err != nil {
     return
 }
 </code></pre>
 
-To use indexer in the code
+To upload a pure bytes array, use the following example
 
 ```go
-import (
-    "logrus"
-    "github.com/0glabs/0g-storage-client/indexer"
-    zg_common "github.com/0glabs/0g-storage-client/common"
-)
-// instantiate a indexer client with logging configuration
-indexerClient, err := indexer.NewClient(args.indexer, indexer.IndexerClientOption{LogOption: zg_common.LogOption{Logger: logrus.StandardLogger()}})
+dataArray, err := core.NewDataInMemory([]byte("..."))
 if err != nil {
-    return
+    return errors.WithMessage(err, "failed to initialize data")
 }
-if err := indexerClient.Upload(ctx, flow, file, opt); err != nil {
+
+// upload the byte array
+if err := indexerClient.Upload(ctx, flow, dataArray, opt); err != nil {
     return
 }
 ```
