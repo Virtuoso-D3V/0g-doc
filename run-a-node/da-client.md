@@ -103,8 +103,8 @@ The following hardware specifications are recommended for running a DA client:
 
     ```bash
     ./bin/combined \
-        --chain.rpc https://rpc-testnet.0g.ai \
-        --chain.private-key 0x00 \
+        --chain.rpc L1_RPC_ENDPOINT \
+        --chain.private-key YOUR_PRIVATE_KEY \
         --chain.receipt-wait-rounds 180 \
         --chain.receipt-wait-interval 1s \
         --chain.gas-limit 2000000 \
@@ -112,7 +112,7 @@ The following hardware specifications are recommended for running a DA client:
         --combined-server.storage.kv-db-path ./../run/ \
         --combined-server.storage.time-to-expire 300 \
         --disperser-server.grpc-port 51001 \
-        --batcher.da-entrance-contract 0xDFC8B84e3C98e8b550c7FEF00BCB2d8742d80a69 \
+        --batcher.da-entrance-contract ENTRANCE_CONTRACT_ADDR \
         --batcher.da-signers-contract 0x0000000000000000000000000000000000001000 \
         --batcher.finalizer-interval 20s \
         --batcher.confirmer-num 3 \
@@ -124,12 +124,12 @@ The following hardware specifications are recommended for running a DA client:
         --batcher.pull-interval 10s \
         --batcher.signing-interval 3s \
         --batcher.signed-pull-interval 20s \
-        --encoder-socket 52.198.175.144:34000 \
+        --encoder-socket DA_ENCODER_SERVER \
         --encoding-timeout 600s \
         --signing-timeout 600s \
         --chain-read-timeout 12s \
         --chain-write-timeout 13s \
         --combined-server.log.level-file trace \
-        --combined-server.log.level-std  trace \
+        --combined-server.log.level-std trace \
         --combined-server.log.path ./../run/run.log
     ```
