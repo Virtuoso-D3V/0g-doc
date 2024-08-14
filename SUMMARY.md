@@ -16,6 +16,7 @@
       * [Storage Pricing](<docs/0G Storage/incentive-mechanism/storage-pricing.md>)
       * [Mining Reward](<docs/0G Storage/incentive-mechanism/mining-reward.md>)
     * [RPC](docs/0g-storage/rpc/README.md)
+      * [Indexer API](docs/0g-storage/rpc/indexer-api.md)
       * [Storage Node API](docs/0g-storage/rpc/storage-node-api.md)
       * [Storage KV API](docs/0g-storage/rpc/storage-kv-api.md)
     * [Access Storage through CLI](docs/0g-storage/access-storage-through-cli/README.md)
